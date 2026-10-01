@@ -21,7 +21,7 @@ public class LoginTest extends BaseTest {
                 {withLockedPermission(), "Epic sadface: Sorry, this user has been locked out."},
                 {new User("Standard_user", "secret_sauce"), "Epic sadface: Username and password do not match any user in this service"},
                 {new User("", "secret_sauce"), "Epic sadface: Username is required"},
-                {new User("standard_user", ""), "Epic ввввsadface: Password is required"}
+                {new User("standard_user", ""), "Epic sadface: Password is required"}
         };
     }
 
