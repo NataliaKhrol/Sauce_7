@@ -50,8 +50,6 @@ public class LoginTest extends BaseTest {
 
         loginPage
                 .open()
-                .fillLoginInput("sdfsd")
-                .fillPasswordInput("sdfvs")
                 .login(withAdminPermission());
 
         boolean pageTitleVisible = productsPage.isPageTitleVisible();
