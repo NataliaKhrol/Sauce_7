@@ -38,9 +38,9 @@ public class LoginPage extends BasePage {
 
     @Step("Авторизация под кредами пользователя")
     public void login(User user) {
-
+        fillLoginInput(user.getUser());
+        fillPasswordInput(user.getPassword());
         driver.findElement(loginBtn).click();
-
     }
 
     @Step("Заполняем поле логина {user}")
