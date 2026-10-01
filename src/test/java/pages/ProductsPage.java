@@ -24,14 +24,16 @@ public class ProductsPage extends BasePage {
         return driver.findElement(pageTitle).getText();
     }
 
-    public void addGoodsToCart(String goodsName) {
+    public ProductsPage addGoodsToCart(String goodsName) {
         By addToCartBtn = By.xpath(ADD_TO_CART_PATTERN.formatted(goodsName));
         driver.findElement(addToCartBtn).click();
+        return this;
     }
 
-    public void addGoodsToCart(int goodsIndex) {
+    public ProductsPage addGoodsToCart(int goodsIndex) {
         By addToCartBtn = By.xpath("//button[text()='Add to cart']");
         driver.findElements(addToCartBtn).get(goodsIndex).click();
+        return this;
     }
 
     public String checkCountersValue() {
